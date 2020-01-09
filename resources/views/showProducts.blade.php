@@ -28,8 +28,9 @@
                     <td>{{$product->productName}}</td>
                     <td>{{$product->productPrice}}</td>
                     <td>{{$product->productDescription}}</td>
-                    <td><a href="/delete"><i class="fas fa-trash-alt"></i></a></td>
-                    <td><a href="/edit"><i class="fas fa-edit"></i></a></td>
+                    <td><a href="/product"><i class="fas fa-plus"></i></a></td>
+                    <td><a href="/delete?id={{$product->id}}"><i class="fas fa-trash-alt"></i></a></td>
+                    <td><a href="/edit?id={{$product->id}}"><i class="fas fa-edit"></i></a></td>
                     </tr>
                     @endforeach
                     </tbody>

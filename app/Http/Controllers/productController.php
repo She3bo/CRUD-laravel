@@ -35,7 +35,15 @@ class productController extends Controller
         //  echo '<pre>';
         //  //return $products->productPrice;
     }
-    public function edit(){
-        
+    public function edit(Request $request){
+
+        $id = $request->query('id');
+        $product = product::find($id);
+        echo "edit " . $product->productName;
+    }
+    public function delete(Request $request){
+        $id = $request->query('id');
+        $product = product::find($id);
+        echo "delet " . $product->productName;
     }
 }
