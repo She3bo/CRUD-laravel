@@ -21,4 +21,6 @@ Route::get('/edit', ['as' => 'getAllSearchPublications',
                      'uses' => 'productController@edit']);
 Route::get('/delete',['as' => 'getAllSearchPublications',
                        'uses' => 'productController@delete']);
+Route::post('/update', ['as' => 'getAllSearchPublications',
+                                'uses' => 'productController@update']);
 

@@ -39,11 +39,26 @@ class productController extends Controller
 
         $id = $request->query('id');
         $product = product::find($id);
-        echo "edit " . $product->productName;
+        return view("/editProduct",['product'=>$product]);
+        // echo "edit " . $product->productName;
+    }
+    public function update(Request $request)
+    {
+        
+        $id = $request->get('id');
+        $product = product::find($id);
+        //var_dump($product);
+        $product->productName = $request->input('p_name') ;
+        $product->productPrice = $request->input('p_price') ;
+        $product->productDescription = $request->input('p_desc') ;        
+        
+        $product->save();
+        return redirect("/read");
     }
     public function delete(Request $request){
         $id = $request->query('id');
         $product = product::find($id);
-        echo "delet " . $product->productName;
+        $product->delete();
+        return redirect("/read");
     }
 }
