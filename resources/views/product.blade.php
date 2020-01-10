@@ -5,7 +5,7 @@
     <div class="row justify-content-center  pt-3">
         <div class="card text-center" style='width:50%' >
             <div class="card-header">
-                <h1>Products<h1>
+                <h1>Add Product<h1>
             </div>
             <div class="card-body">
                 <form action="/product" method= "post">

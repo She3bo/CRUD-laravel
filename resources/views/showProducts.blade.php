@@ -1,6 +1,7 @@
 @extends("template/app")
 @section('title','Products')
 @section('content')
+    
     <div class="row justify-content-center pt-3 ">
         <div class="card text-center" style='width:70%'>
         <div class="card-header">
@@ -26,8 +27,8 @@
                 <td>{{$product->productName}}</td>
                 <td>{{$product->productPrice}}</td>
                 <td>{{$product->productDescription}}</td>
-                <td><a href="/delete?id={{$product->id}}"><i class="fas fa-trash-alt"></i></a></td>
-                <td><a href="/edit?id={{$product->id}}"><i class="fas fa-edit"></i></a></td>
+                <td><a href="/delete?id={{$product->id}}"><i class="fas fa-trash-alt mr-2"></i></a>
+                    <a href="/edit?id={{$product->id}}"><i class="fas fa-edit"></i></a></td>
                 </tr>
                 @endforeach
                 </tbody>
