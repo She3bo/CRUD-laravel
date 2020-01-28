@@ -21,9 +21,8 @@ class productController extends Controller
         $product->productDescription = $request->input('p_desc') ;        
         
         $product->save();
-        return redirect("/read");
-
-
+        $request->session()->flash('success',"Product Created successfully");
+        return redirect('/read');
     }
     public function read(){
          $products = product::all();

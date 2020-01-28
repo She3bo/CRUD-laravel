@@ -7,6 +7,11 @@
         <div class="card-header">
             <h1>All products</h1>
         </div>
+        @if(session()->has('success'))
+            <div class="alert alert-success">
+            {{session()->get('success')}}
+            </div>
+        @endif
         <div class="card-body">
         <table class="table">
             <thead>
